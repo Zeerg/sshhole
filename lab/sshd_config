@@ -1,0 +1,16 @@
+Port 2222
+# Docker publishes this only on host loopback.
+ListenAddress 0.0.0.0
+HostKey /etc/ssh/ssh_host_rsa_key
+HostKey /etc/ssh/ssh_host_ecdsa_key
+HostKey /etc/ssh/ssh_host_ed25519_key
+PermitRootLogin yes
+PasswordAuthentication yes
+PubkeyAuthentication no
+KbdInteractiveAuthentication no
+StrictModes yes
+PerSourcePenalties no
+UseDNS no
+PidFile /run/sshd.pid
+LogLevel VERBOSE
+Subsystem sftp internal-sftp
